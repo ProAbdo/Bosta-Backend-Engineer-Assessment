@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const authController = require('../controllers/authController');
+const { validateRegister, validateLogin, handleValidationErrors } = require('../middleware/validation');
+const { authenticateToken } = require('../middleware/auth');
+router.post('/login', validateLogin, handleValidationErrors, authController.login);
+router.get('/profile', authenticateToken, authController.getProfile);
+router.post('/register', validateRegister, handleValidationErrors, authController.register);
+router.put('/profile', authenticateToken, validateRegister, handleValidationErrors, authController.updateProfile);
+router.put('/password', authenticateToken, authController.changePassword);
+router.get('/verify', authController.verifyToken);
+module.exports = router;

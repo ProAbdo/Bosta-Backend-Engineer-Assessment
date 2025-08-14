@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql
+    container_name: library_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: library_management
+      MYSQL_USER: library_user
+      MYSQL_PASSWORD: library_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - library_network
+
+  app:
+    build: .
+    container_name: library_app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=mysql
+      - DB_USER=library_user
+      - DB_PASSWORD=library_password
+      - DB_NAME=library_management
+      - DB_PORT=3306
+      - JWT_SECRET=d41c1c01e158f2fbe7e79a6a7b5b9b34b44c4d92f19c16c3e7b0a11d6f3b72ac
+      - JWT_EXPIRES_IN=24h
+      - RATE_LIMIT_WINDOW_MS=900000
+      - RATE_LIMIT_MAX_REQUESTS=100
+    depends_on:
+      - mysql
+    networks:
+      - library_network
+
+volumes:
+  mysql_data:
+
+networks:
+  library_network:
+    driver: bridge
