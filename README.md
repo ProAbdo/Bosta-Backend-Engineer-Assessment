@@ -273,32 +273,6 @@ RATE_LIMIT_MAX_REQUESTS=100
 - **Application**: 3000
 - **Database**: 3306
 
-## 📦 Dependencies
-
-### Production Dependencies
-
-- **express**: Web framework
-- **mysql2**: MySQL driver
-- **sequelize**: ORM for database operations
-- **cors**: Cross-origin resource sharing
-- **helmet**: Security middleware
-- **express-rate-limit**: Rate limiting
-- **express-validator**: Input validation
-- **bcryptjs**: Password hashing
-- **jsonwebtoken**: JWT authentication
-- **multer**: File upload handling
-- **exceljs**: Excel file generation
-- **csv-writer**: CSV file generation
-- **dotenv**: Environment variable management
-
-### Development Dependencies
-
-- **nodemon**: Development server with auto-reload
-- **jest**: Testing framework
-- **supertest**: HTTP testing
-- **sequelize-cli**: Database CLI tools
-- **axios**: HTTP client for testing
-
 ### Development Guidelines
 
 - Follow existing code style and conventions
