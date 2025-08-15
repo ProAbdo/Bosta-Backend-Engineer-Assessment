@@ -257,17 +257,3 @@ JWT_EXPIRES_IN=24h
 RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX_REQUESTS=100
 ```
-
-## 🐳 Docker Configuration
-
-### Services
-
-- **MySQL Database**: Persistent storage with custom credentials
-- **Node.js Application**: Express server with production optimizations
-- **Network**: Isolated bridge network for service communication
-- **Volumes**: Persistent MySQL data storage
-
-### Ports
-
-- **Application**: 3000
-- **Database**: 3306
