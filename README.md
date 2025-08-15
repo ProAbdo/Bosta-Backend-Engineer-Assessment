@@ -6,7 +6,6 @@
 [![Sequelize](https://img.shields.io/badge/Sequelize-6.35+-purple.svg)](https://sequelize.org/)
 [![JWT](https://img.shields.io/badge/JWT-Authentication-yellow.svg)](https://jwt.io/)
 [![Docker](https://img.shields.io/badge/Docker-3.8+-lightblue.svg)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A robust, scalable, and feature-rich Library Management System built with **Node.js**, **Express.js**, and **MySQL**. This system provides comprehensive book management, borrower tracking, borrowing records, and advanced reporting capabilities with role-based access control.
 
