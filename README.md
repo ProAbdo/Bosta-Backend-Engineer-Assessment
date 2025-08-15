@@ -271,10 +271,3 @@ RATE_LIMIT_MAX_REQUESTS=100
 
 - **Application**: 3000
 - **Database**: 3306
-
-### Development Guidelines
-
-- Follow existing code style and conventions
-- Add tests for new features
-- Ensure all tests pass before submitting
-- Update documentation as needed
